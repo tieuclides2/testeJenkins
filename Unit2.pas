@@ -21,7 +21,7 @@ type
     procedure Test1;
     // Test with TestCase Attribute to supply parameters.
     [Test]
-    [TestCase('TestA','1,2,3')]
+    [TestCase('TestA','1,2,2')]
     [TestCase('TestB','3,4,7')]
     procedure Test2(const A : Integer; const B : Integer; const R : Integer);
   end;
