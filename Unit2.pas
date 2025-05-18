@@ -21,7 +21,7 @@ type
     procedure Test1;
     // Test with TestCase Attribute to supply parameters.
     [Test]
-    [TestCase('TestA','1,2,2')]
+    [TestCase('TestA','1,2,3')]
     [TestCase('TestB','3,4,7')]
     procedure Test2(const A : Integer; const B : Integer; const R : Integer);
   end;
@@ -39,7 +39,12 @@ begin
 end;
 
 procedure TMyTestObject.Test1;
+var
+  Resultado: Integer;
 begin
+  Resultado := FCalc.Add(2,2);
+
+  Assert.IsTrue(Resultado = 4, 'add está com erro');
 end;
 
 procedure TMyTestObject.Test2(const A : Integer;const B : Integer; const R : Integer);
