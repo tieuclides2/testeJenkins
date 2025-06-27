@@ -42,7 +42,7 @@ procedure TMyTestObject.Test1;
 var
   Resultado: Integer;
 begin
-  Resultado := FCalc.Add(2,8);
+  Resultado := FCalc.Add(2,2);
 
   Assert.IsTrue(Resultado = 4, 'add está com erro');
 end;
