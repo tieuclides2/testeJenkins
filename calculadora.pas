@@ -12,7 +12,7 @@ implementation
 
 function TCalculadora.Add(A, B: integer): integer;
 begin
-  Result := A + C;
+  Result := A + B;
 end;
 
 end.
