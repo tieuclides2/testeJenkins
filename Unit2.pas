@@ -22,8 +22,13 @@ type
     // Test with TestCase Attribute to supply parameters.
     [Test]
     [TestCase('TestA','1,2,3')]
+
     [TestCase('TestB','3,4,7')]
-    procedure Test2(const A : Integer; const B : Integer; const R : Integer);
+    procedure Test2(const A, B : Integer; const R : Integer);
+
+    [TestCase('TestC','6,3,2')] // divisao
+    procedure Test3(const A, B : Integer; const R : Currency);
+
   end;
 
 implementation
@@ -56,6 +61,15 @@ begin
     Assert.Pass('Passouu!')
   else
     Assert.Fail('Erro!');
+end;
+
+procedure TMyTestObject.Test3(const A, B: Integer; const R: Currency);
+var
+  Resultado : Currency;
+begin
+  Resultado := FCalc.Divi(A,B);
+
+  Assert.IsTrue(Resultado = R, 'funcao tao retornou erro');
 end;
 
 initialization
