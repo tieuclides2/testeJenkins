@@ -65,6 +65,5 @@ begin
     on E: Exception do
       System.Writeln(E.ClassName, ': ', E.Message);
   end;
-  Readln;
 {$ENDIF}
 end.
