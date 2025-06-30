@@ -47,7 +47,7 @@ procedure TMyTestObject.Test1;
 var
   Resultado: Integer;
 begin
-  Resultado := FCalc.Add(2,5);
+  Resultado := FCalc.Add(2,256);
 
   Assert.IsTrue(Resultado = 4, 'add está com erro');
 end;
